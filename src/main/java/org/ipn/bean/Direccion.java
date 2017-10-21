@@ -1,15 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.ipn.bean;
 
-/**
- *
- * @author Giselle
- */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component
 public class Direccion {
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public String getCP() {
+        return CP;
+    }
+    @Autowired
+    public void setCalle(@Value("Insurgentes Norte")String calle) {
+        this.calle = calle;
+    }
+    @Autowired
+    public void setCP(@Value("555")String CP) {
+        this.CP = CP;
+    }
+    
     
     private String calle;
     private String CP;

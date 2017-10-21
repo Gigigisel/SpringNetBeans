@@ -5,11 +5,14 @@
  */
 package org.ipn.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  *
  * @author Giselle
  */
 public class Administrador {
+    @Autowired
     private Direccion direccion;
     private int  idAd;
     private String nombre;

@@ -10,15 +10,19 @@
     <bean id="miBean" class="org.ipn.bean.BeanSpring">
         <property name="mensaje" value ="Hola mundo de Spring, mejorando cada dia"/>
     </bean>
-    
+     <!--
     <bean id="direccion" class="org.ipn.bean.Direccion">
         <constructor-arg  name="calle" value="Insurgentes Sur"></constructor-arg>
         <constructor-arg  name="CP" value="5206"></constructor-arg>
     </bean>
-    
+     -->
     <bean id="admin" class="org.ipn.bean.Administrador">
         <property  name="idAd" value="77"></property>
         <property  name="nombre" value="Juan"></property>
         <property  name="direccion" ref="direccion"></property>
     </bean>
+  
+    <!--    Ayud a encontrar el bean-->
+    <context:component-scan base-package="org.ipn.bean"></context:component-scan>
+    
 </beans>
